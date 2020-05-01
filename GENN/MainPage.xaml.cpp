@@ -122,6 +122,7 @@ void GENN::MainPage::startTraining(Platform::Object^ sender, Windows::UI::Xaml::
     }
     else if (!network.isPaused()) {
         startButton->Content = "Stop Training";
+        pauseButton->Content = "Pause Training";
         trPrecText->Text = "";
         testPrecText->Text = "";
         testButton->IsEnabled = false;
