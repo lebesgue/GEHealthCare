@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="GENN.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GENN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="640">
+
+    <Grid>
+        <StackPanel x:Name="contentPanel" Margin="120,30,120,0">
+            <TextBlock HorizontalAlignment="Left" Text="DNN on MNIST" FontSize="36"/>
+            <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,0,0,0">
+                <Button x:Name="loadButtonr" Content="Load MNIST Data" Margin="0,0,4,0" Click="loadMNIST"/>
+                <Button x:Name="startButton" Content="Start Training" Margin="4,0,4,0" Click="startTraining" IsEnabled="False"/>
+                <Button x:Name="pauseButton" Content="Pause Training" Margin="4,0,4,0" Click="pauseTraining" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel x:Name="testPanel" Orientation="Horizontal" Margin="0,10,0,10">
+                <Button x:Name="testButton" Content="Test on Random 1000 Images" Margin="0,0,4,0" Click="testNN" IsEnabled="False"/>
+            </StackPanel>
+            <StackPanel x:Name="progressPanel">
+                <Grid x:Name="FormLayoutGrid">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Epoch" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Loss" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="Train Precision" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="0" Grid.Column="3" Text="Test Precision" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" x:Name="epochText" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" x:Name="lossText" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="2" x:Name="trPrecText" Margin="4,0,4,0"/>
+                    <TextBlock Grid.Row="1" Grid.Column="3" x:Name="testPrecText" Margin="4,0,4,0"/>
+                </Grid>
+                <StackPanel Orientation="Horizontal">
+                </StackPanel>
+                <ProgressBar x:Name="trainProgress" Height="20" Margin="10,10,10,10" Maximum="10000" LargeChange="1" SmallChange="1" Foreground="White"></ProgressBar>
+            </StackPanel>
+            <Image x:Name="canvas" HorizontalAlignment="Left"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

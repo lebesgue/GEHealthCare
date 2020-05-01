@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>fb50b34f-f463-4ff2-a149-8b4ac1cf8d97</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>91d686a4-7ae4-40c1-942a-13bca31e7c5e</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{9c5eec00-d7c7-43bb-9ca7-284aa8685bda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="NN.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="reader.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="DenseLayer.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="NN.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="reader.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="DenseLayer.cuh">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="plot.hpp">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="DenseLayer.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="cudart64_102.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="DenseLayer.cu">
+      <Filter>Sources</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>
