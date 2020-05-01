@@ -2,7 +2,7 @@
 Homework assignment for GE Healthcare job application. 
 UWP app for for fully connected neural network training and testing on the MNIST dataset.
 
-**If the app has bor or the solution is not building, do not hesitate to contact me!**
+**If the app is bugged or the solution is not building, do not hesitate to contact me!**
 
 ## Notes and Remarks
 
